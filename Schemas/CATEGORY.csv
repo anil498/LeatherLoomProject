@@ -1,0 +1,15 @@
+Field,Type,Null,Key,Default,Extra
+RowId,int(11),NO,PRI,NULL,
+OrgId,varchar(5),NO,,NULL,
+MerchId,varchar(5),NO,UNI,NULL,
+UId,varchar(35),NO,,NULL,
+MerchConfigId,smallint(6),YES,,NULL,
+MerchName,varchar(50),NO,,NULL,
+MerchDesc,varchar(100),YES,,NULL,
+ParentMerchCode,varchar(5),YES,MUL,NULL,
+IsActive,tinyint(1),NO,,1,
+CRTBy,varchar(100),NO,,NULL,
+CRTDate,datetime,NO,,NULL,
+UPDBy,varchar(100),NO,,NULL,
+updated_at,datetime(3),NO,,CURRENT_TIMESTAMP(3),"on update CURRENT_TIMESTAMP(3)"
+RowVersion,int(11),NO,,NULL,

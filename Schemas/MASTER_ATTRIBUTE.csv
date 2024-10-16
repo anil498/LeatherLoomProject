@@ -1,0 +1,18 @@
+Field,Type,Null,Key,Default,Extra
+OrgId,varchar(5),YES,MUL,NULL,
+AtribId,int(11),NO,PRI,NULL,auto_increment
+AtribDesc,varchar(255),NO,,NULL,
+AtribLabel,varchar(255),YES,,NULL,
+AttribScope,int(1),YES,,NULL,
+IsMandatory,"tinyint(1) unsigned",YES,,NULL,
+AtribGroup,"int(10) unsigned",YES,,NULL,
+InputType,smallint(6),YES,,NULL,
+InputValidationRule,tinyint(4),YES,,NULL,
+DefaultVal,varchar(255),YES,,NULL,
+IsActive,"tinyint(4) unsigned",YES,,NULL,
+UId,varchar(35),NO,UNI,NULL,
+CRTBy,varchar(100),YES,,NULL,
+CRTDate,datetime(3),NO,,NULL,
+UPDBy,varchar(100),YES,,NULL,
+updated_at,datetime(3),NO,,CURRENT_TIMESTAMP(3),"on update CURRENT_TIMESTAMP(3)"
+RowVersion,int(11),YES,,NULL,

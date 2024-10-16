@@ -1,0 +1,15 @@
+Field,Type,Null,Key,Default,Extra
+RowId,int(11),NO,PRI,NULL,auto_increment
+AtribId,int(11),YES,MUL,NULL,
+OrgId,varchar(5),NO,,NULL,
+LineNo,smallint(6),NO,,NULL,
+AtribValue,varchar(255),NO,,NULL,
+AtribValueDesc,varchar(255),YES,,NULL,
+Position,int(11),YES,,NULL,
+IsDefault,tinyint(4),YES,,0,
+Status,tinyint(4),NO,,NULL,
+CRTBy,varchar(100),NO,,NULL,
+CRTDate,datetime,NO,,NULL,
+UPDBy,varchar(100),NO,,NULL,
+updated_at,datetime(3),NO,,CURRENT_TIMESTAMP(3),"on update CURRENT_TIMESTAMP(3)"
+RowVersion,int(11),NO,,NULL,
