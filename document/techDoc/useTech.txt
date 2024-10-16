@@ -1,0 +1,17 @@
+Tech doc
+
+## Git 
+Step
+1. clone project
+:: git clone https://github.com/anil498/LeatherLoomProject.git
+2. set remote
+:: git remote add origin https://github.com/anil498/LeatherLoomProject.git
+3. check is remote set 
+:: git remote -v
+4. add file
+:: git add <filename>
+5. add commit 
+:: git commit -m "commit msg"
+6. push 
+:: git push -u origin master [for first time]
+:: git push
