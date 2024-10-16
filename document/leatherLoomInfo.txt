@@ -1,0 +1,22 @@
+leatherLoom
+
+>> name : LeatherLoom.com , CordCraft , CordArt, CordEra, 
+
+
+>> technology : 
+development
+front : react 
+backend : spring 
+ui/ux : search by see other people website
+testing : 
+
+
+deployment
+domain : 
+hosting :
+
+
+marketing
+>client
+
+..........
