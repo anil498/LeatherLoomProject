@@ -12,7 +12,6 @@ export default function Header() {
       {/* Nav Bar */}
       <NavBar logo={logo} />
 
-      
     </div>
   );
 }
