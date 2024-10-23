@@ -1,0 +1,62 @@
+.product-card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap onto the next line */
+  justify-content: space-between; /* Spreads the cards evenly */
+  gap: 1em; /* Adds space between the cards */
+  padding: 0.5em; /* Padding around the container */
+}
+
+/* Container for the entire home page */
+.homepage-container {
+  text-align: center;
+  padding-top: 8rem; 
+}
+
+/* Image container for the GIF */
+.img-container {
+  display: inline-block; /* Ensures the heading stays centered */
+  padding-bottom: 0.5rem;
+  margin-left: auto; /* Center the heading */
+  margin-right: auto; /* Center the heading */
+  width: 60%; /* Adjust as needed */
+}
+
+/* Featured heading styling */
+.featured-heading {
+  display: inline-block; /* Ensures the heading stays centered */
+  padding-bottom: 0.5rem;
+  margin-left: auto; /* Center the heading */
+  margin-right: auto; /* Center the heading */
+}
+
+/* Media query for mobile view (max-width 600px) */
+@media (max-width: 600px) {
+  .product-card-container > * {
+    flex: 1 1 calc(50% - 1em); /* Two cards per row, minus the gap */
+    max-width: calc(50% - 1em); /* Ensures two cards fit within the row */
+  }
+
+  .homepage-container {
+    padding-top: 5rem; 
+  }
+}
+
+/* Media query for tablet view (max-width 768px) */
+@media (max-width: 768px) {
+  .product-card-container > * {
+    flex: 1 1 calc(50% - 1em); /* Two cards per row, minus the gap */
+    max-width: calc(50% - 1em); /* Ensures two cards fit within the row */
+  }
+
+  .homepage-container {
+    padding-top: 5rem; 
+  }
+}
+
+/* Media query for laptops and larger (min-width 769px) */
+@media (min-width: 769px) {
+  .product-card-container > * {
+    flex: 1 1 calc(25% - 1em); /* Four cards per row, minus the gap */
+    max-width: calc(25% - 1em); /* Ensures four cards fit within the row */
+  }
+}

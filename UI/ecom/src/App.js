@@ -1,11 +1,13 @@
 import React from 'react';
-import Layout from './components/function/Layout';
+import MainLayout from './layouts/MainLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <Layout/>
+    <BrowserRouter>
+    <MainLayout/>
+    </BrowserRouter>
   );
 }
 

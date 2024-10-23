@@ -1,0 +1,31 @@
+.brand-logo {
+    margin-right: 10px; /* Space between logo and brand name */
+    height: 1em; /* Adjust height automatically */
+}
+  /* Responsive adjustments */
+.brand-name {
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255) !important; /* Slightly smaller brand name */
+}  
+
+/* Sblsearch bar styling */
+.navbar .form-control {
+    border-radius: 1.25rem; /* Rounded corners for the search bar */
+    border: 1px solid #ced4da; /* Light border */
+}
+
+.navbar .form-control {
+    width: 70%; /* Wider search bar */
+}
+
+/* General styles for the navbar */
+.navbar {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Button styling */
+.navbar .btn {
+    border-radius: 1.25rem; /* Rounded corners for buttons */
+}
+

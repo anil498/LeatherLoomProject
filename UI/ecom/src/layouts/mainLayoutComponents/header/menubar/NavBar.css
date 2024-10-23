@@ -1,0 +1,21 @@
+/* NavBar.css */
+
+/* General styles for the menu bar */
+.menu-bar {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Nav item styles */
+.nav-item {
+    margin: 0 10px; /* Horizontal spacing */
+}
+
+/* Offcanvas styles */
+.offcanvas {
+    background-color: #f8f9fa; /* Light background for the offcanvas */
+}
+
+.offcanvas .nav-item {
+    padding: 1rem; /* Spacing around nav items */
+    color: #000; /* Text color for nav items */
+}
