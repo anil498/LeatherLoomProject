@@ -1,0 +1,79 @@
+.sort-component {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    /* Position the entire sort component to the right */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sort-label {
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.sort-dropdown {
+    padding: 0.2rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid #ccc;
+    width: 10rem;
+    /* Adjust width as needed */
+}
+
+
+
+
+@media (max-width: 600px) {
+    .sort-component {
+        flex-direction: column;
+        /* Stack label and dropdown on smaller screens */
+        align-items: flex-start;
+        /* Align to the left */
+        width: 100%;
+        /* Take full width */
+    }
+
+    .sort-label {
+        margin-bottom: 0.5rem;
+        /* Space below label */
+        margin-right: 0;
+        /* Remove right margin */
+    }
+
+    .sort-dropdown {
+        width: 100%;
+        /* Dropdown takes full width on smaller screens */
+        padding: 0.3rem;
+        /* Slightly larger padding */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sort-component {
+        width: calc(50% - 10px); /* Match width to product cards */
+        margin-left: auto; /* Align to the right */
+        margin-top: 0; /* Adjust margin */
+    }
+
+    .sort-label,
+    .sort-dropdown {
+        font-size: 0.9rem;
+        width: 8rem;
+        /* Adjust the width for smaller screens */
+    }
+
+    .sort-label {
+        margin-right: 0.5rem; /* Slight adjustment for spacing */
+      }
+    
+}
+
+@media (min-width: 769px) {
+    .product-card {
+        width: calc(25% - 20px);
+        /* Four cards per row on larger screens */
+    }
+}

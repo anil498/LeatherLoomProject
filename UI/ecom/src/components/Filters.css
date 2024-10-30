@@ -1,0 +1,200 @@
+/* General styles for the filter bar */
+.filter-bar {
+  padding: 0.5rem;
+  padding-right: 8em;
+  background-color: #f9f9f9; /* Light background color for contrast */
+  border: 1px solid #ddd; /* Optional border for definition */
+  border-radius: 5px; /* Rounded corners */
+  position: fixed; /* Fixed position for off-canvas effect */
+  top: 0;
+  right: -100%; /* Initially hidden off-screen */
+  height: 100%;
+  width: 50%;
+  transition: right 0.4s ease; /* Smooth sliding transition */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  overflow-y: auto; /* Enable scrolling for long content */
+}
+
+.apply-filters-button,
+.clear-filters-button {
+  width: 45%; /* Make both buttons take equal width */
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
+.apply-filters-button {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.clear-filters-button {
+  background-color: #dc3545; /* Red */
+  color: white;
+}
+/* Off-canvas open state */
+.filter-bar.open {
+  right: 0; /* Slide the filter bar into view */
+}
+
+.filter-title {
+  font-size: 1.5rem; /* Title font size */
+  margin-bottom: 15px; /* Spacing below title */
+  
+}
+
+.filter-group {
+  margin-bottom: 15px; /* Space between filter groups */
+}
+
+.filter-label {
+  cursor: pointer; /* Pointer cursor for labels */
+  font-weight: bold; /* Make labels bold */
+  margin-bottom: 5px; /* Space below the label */
+}
+
+.filter-options {
+  display: block; /* Ensure vertical layout */
+  padding-left: 15px; /* Indent the options */
+  top: 100%; /* Position it just below the filter label */
+  width: 100%; /* Take the full width */
+}
+
+.filter-option {
+  margin-bottom: 0.1em; /* Space between filter options */
+  cursor: pointer; /* Pointer cursor for selectable options */
+  padding: 0.2em; /* Add padding for better touch targets */
+  background-color: #f1f1f1; /* Default background color for options */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover/selection transition */
+}
+
+.filter-option:hover {
+  background-color: #ddd; /* Change background on hover */
+}
+
+.filter-option.selected {
+  background-color: #007bff; /* Blue background when selected */
+  color: white; /* White text when selected */
+}
+
+/* Filter toggle button for mobile and tablet view */
+.filter-toggle {
+  display: none; /* Hidden by default, visible on small screens */
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff; /* Match the button color */
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
+}
+
+.filter-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Offcanvas for Mobile View */
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.offcanvas-filter {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 80%; /* Adjust width as necessary */
+  height: 100%;
+  background-color: #f9f9f9; /* Match background with the filter bar */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  transform: translateX(100%); /* Initially off-screen */
+  z-index: 1001; /* Ensure it's on top of other elements */
+}
+
+/* Offcanvas open state */
+.offcanvas-filter.show {
+  transform: translateX(0); /* Slide into view */
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.close-offcanvas:hover {
+  background-color: #f0f0f0; /* Background color on hover for visibility */
+}
+
+.filter-bar.filters-toggle {
+  display: none;
+}
+
+
+
+/* Media queries for responsiveness */
+
+/* For mobile screens up to 600px */
+@media (max-width: 600px) {
+  .filter-bar {
+    display: none; /* Hide the filter bar by default on mobile */
+  }
+
+  .filter-toggle .filters-toggle{
+    display: flex; /* Show the toggle button on small screens */
+  }
+
+  .offcanvas-filter {
+    display: block; /* Allow offcanvas to be displayed */
+  }
+
+  
+}
+
+/* For tablet screens up to 768px */
+@media (max-width: 768px) {
+  .filter-bar {
+    display: none; /* Hide the filter bar by default on tablets */
+    width: calc(50% - 10px); /* Adjust width for mobile/tablet */
+    margin: 0; /* Remove margin for alignment */
+  }
+
+  .filter-toggle .filters-toggle {
+    display: flex; /* Show the toggle button on tablet screens */
+  }
+
+  .filter-title {
+    font-size: 1.25rem; /* Slightly smaller title on tablet */
+  }
+
+  
+}
+
+/* For larger screens 769px and above */
+@media (min-width: 769px) {
+  .filter-bar {
+    display: block; /* Show the filter bar on larger screens */
+    position: static; /* Reset positioning */
+    width: auto;
+    height: auto;
+    transition: none; /* No sliding effect on larger screens */
+  }
+
+  .filter-toggle {
+    display: none; /* Hide the toggle button on larger screens */
+  }
+}
